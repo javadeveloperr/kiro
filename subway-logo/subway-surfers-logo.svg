@@ -1,0 +1,159 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background gradient: urban sunset / graffiti vibe -->
+    <radialGradient id="bgGrad" cx="50%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#FFD24C"/>
+      <stop offset="38%" stop-color="#FF8A00"/>
+      <stop offset="72%" stop-color="#FF3D7F"/>
+      <stop offset="100%" stop-color="#7A1FA2"/>
+    </radialGradient>
+
+    <!-- Speed rail gradient -->
+    <linearGradient id="railGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B1035"/>
+      <stop offset="100%" stop-color="#3A1E6E"/>
+    </linearGradient>
+
+    <!-- Sneaker gradient -->
+    <linearGradient id="shoeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="55%" stop-color="#00B8D9"/>
+      <stop offset="100%" stop-color="#0066FF"/>
+    </linearGradient>
+
+    <!-- Lightning gradient -->
+    <linearGradient id="boltGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFF36B"/>
+      <stop offset="100%" stop-color="#FFB800"/>
+    </linearGradient>
+
+    <!-- Outer ring gradient -->
+    <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#FF3D7F"/>
+      <stop offset="100%" stop-color="#FFD24C"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1B1035" flood-opacity="0.45"/>
+    </filter>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="circleClip">
+      <circle cx="400" cy="400" r="360"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer gradient ring -->
+  <circle cx="400" cy="400" r="392" fill="url(#ringGrad)"/>
+  <circle cx="400" cy="400" r="372" fill="#11071F"/>
+
+  <!-- Main circular scene -->
+  <g clip-path="url(#circleClip)">
+    <circle cx="400" cy="400" r="360" fill="url(#bgGrad)"/>
+
+    <!-- Sun rays / energy burst -->
+    <g opacity="0.18">
+      <polygon points="400,400 360,-40 440,-40" fill="#fff"/>
+      <polygon points="400,400 230,0 300,-30 360,40" fill="#fff"/>
+      <polygon points="400,400 570,0 500,-30 440,40" fill="#fff"/>
+      <polygon points="400,400 120,120 80,180 200,220" fill="#fff"/>
+      <polygon points="400,400 680,120 720,180 600,220" fill="#fff"/>
+    </g>
+
+    <!-- City skyline silhouette -->
+    <g fill="#2A0F4A" opacity="0.85">
+      <rect x="40" y="300" width="60" height="200"/>
+      <rect x="110" y="250" width="48" height="250"/>
+      <rect x="168" y="330" width="40" height="170"/>
+      <rect x="600" y="270" width="55" height="230"/>
+      <rect x="665" y="320" width="42" height="180"/>
+      <rect x="715" y="290" width="50" height="210"/>
+      <!-- windows -->
+      <g fill="#FFD24C" opacity="0.6">
+        <rect x="120" y="270" width="8" height="10"/>
+        <rect x="138" y="270" width="8" height="10"/>
+        <rect x="120" y="295" width="8" height="10"/>
+        <rect x="615" y="290" width="8" height="10"/>
+        <rect x="633" y="290" width="8" height="10"/>
+        <rect x="615" y="315" width="8" height="10"/>
+      </g>
+    </g>
+
+    <!-- Perspective subway rails -->
+    <g>
+      <polygon points="360,800 440,800 420,470 380,470" fill="url(#railGrad)"/>
+      <polygon points="200,800 300,800 372,470 388,470" fill="url(#railGrad)" opacity="0.9"/>
+      <polygon points="600,800 500,800 428,470 412,470" fill="url(#railGrad)" opacity="0.9"/>
+      <!-- sleepers -->
+      <g fill="#FFD24C" opacity="0.5">
+        <rect x="350" y="500" width="100" height="10" rx="4"/>
+        <rect x="335" y="560" width="130" height="13" rx="5"/>
+        <rect x="315" y="635" width="170" height="16" rx="6"/>
+        <rect x="290" y="720" width="220" height="20" rx="7"/>
+      </g>
+    </g>
+
+    <!-- Lightning speed bolts -->
+    <g filter="url(#glow)">
+      <polygon points="150,360 230,360 195,430 250,430 140,560 185,455 130,455" fill="url(#boltGrad)" opacity="0.9"/>
+      <polygon points="650,360 570,360 605,430 550,430 660,560 615,455 670,455" fill="url(#boltGrad)" opacity="0.9"/>
+    </g>
+
+    <!-- Central running sneaker emblem -->
+    <g filter="url(#softShadow)" transform="translate(400 380) rotate(-12)">
+      <!-- shoe sole -->
+      <path d="M -150 70 Q -160 95 -120 100 L 130 100 Q 175 100 170 70 L 165 55 L -150 55 Z" fill="#11071F"/>
+      <!-- shoe body -->
+      <path d="M -150 55
+               Q -150 0 -90 -8
+               L -30 -14
+               Q 0 -45 45 -55
+               Q 70 -60 85 -40
+               L 110 -5
+               Q 165 5 168 45
+               L 168 58
+               Z" fill="url(#shoeGrad)"/>
+      <!-- swoosh stripe -->
+      <path d="M -90 35 Q 10 -10 120 30 Q 30 18 -90 48 Z" fill="#fff" opacity="0.92"/>
+      <!-- laces -->
+      <g stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.95">
+        <line x1="-10" y1="-8" x2="35" y2="-30"/>
+        <line x1="5" y1="6" x2="50" y2="-16"/>
+        <line x1="20" y1="20" x2="65" y2="-2"/>
+      </g>
+      <!-- motion lines -->
+      <g stroke="#FFF36B" stroke-width="9" stroke-linecap="round" opacity="0.9">
+        <line x1="-210" y1="-10" x2="-160" y2="-10"/>
+        <line x1="-235" y1="25" x2="-175" y2="25"/>
+        <line x1="-205" y1="60" x2="-155" y2="60"/>
+      </g>
+    </g>
+
+    <!-- Channel name banner -->
+    <g transform="translate(400 620)">
+      <rect x="-235" y="-42" width="470" height="84" rx="42" fill="#11071F" opacity="0.92"/>
+      <rect x="-235" y="-42" width="470" height="84" rx="42" fill="none" stroke="url(#ringGrad)" stroke-width="5"/>
+      <text x="0" y="14" text-anchor="middle" font-family="Arial Black, Arial, sans-serif"
+            font-size="58" font-weight="900" fill="#fff" letter-spacing="2">SURF RUN</text>
+    </g>
+  </g>
+
+  <!-- SUBSCRIBE badge (call to action) -->
+  <g transform="translate(400 738)">
+    <rect x="-130" y="-30" width="260" height="60" rx="30" fill="#FF0033"/>
+    <rect x="-130" y="-30" width="260" height="60" rx="30" fill="none" stroke="#fff" stroke-width="3"/>
+    <!-- play triangle -->
+    <circle cx="-92" cy="0" r="17" fill="#fff"/>
+    <polygon points="-99,-9 -99,9 -82,0" fill="#FF0033"/>
+    <text x="22" y="9" text-anchor="middle" font-family="Arial Black, Arial, sans-serif"
+          font-size="30" font-weight="900" fill="#fff" letter-spacing="1">SUBSCRIBE</text>
+  </g>
+</svg>
