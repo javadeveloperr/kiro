@@ -1,0 +1,181 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="bg2" cx="50%" cy="40%" r="78%">
+      <stop offset="0%" stop-color="#FFE15C"/>
+      <stop offset="40%" stop-color="#FF9E2C"/>
+      <stop offset="74%" stop-color="#FF4D8D"/>
+      <stop offset="100%" stop-color="#6A1B9A"/>
+    </radialGradient>
+    <linearGradient id="ring2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="50%" stop-color="#FF3D7F"/>
+      <stop offset="100%" stop-color="#FFD24C"/>
+    </linearGradient>
+    <linearGradient id="rail2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1B1035"/>
+      <stop offset="100%" stop-color="#3A1E6E"/>
+    </linearGradient>
+    <linearGradient id="hoodie" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF5252"/>
+      <stop offset="100%" stop-color="#D32F2F"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFA000"/>
+    </linearGradient>
+    <linearGradient id="pants" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2979FF"/>
+      <stop offset="100%" stop-color="#1565C0"/>
+    </linearGradient>
+    <filter id="ds2" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#1B1035" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="clip2"><circle cx="400" cy="400" r="360"/></clipPath>
+  </defs>
+
+  <!-- Outer ring -->
+  <circle cx="400" cy="400" r="392" fill="url(#ring2)"/>
+  <circle cx="400" cy="400" r="372" fill="#11071F"/>
+
+  <g clip-path="url(#clip2)">
+    <circle cx="400" cy="400" r="360" fill="url(#bg2)"/>
+
+    <!-- energy rays -->
+    <g opacity="0.16" fill="#fff">
+      <polygon points="400,400 360,-40 440,-40"/>
+      <polygon points="400,400 200,0 280,-20 360,40"/>
+      <polygon points="400,400 600,0 520,-20 440,40"/>
+      <polygon points="400,400 90,150 60,210 200,240"/>
+      <polygon points="400,400 710,150 740,210 600,240"/>
+    </g>
+
+    <!-- city skyline -->
+    <g fill="#2A0F4A" opacity="0.85">
+      <rect x="30" y="300" width="60" height="220"/>
+      <rect x="100" y="250" width="46" height="270"/>
+      <rect x="156" y="330" width="40" height="190"/>
+      <rect x="610" y="270" width="55" height="250"/>
+      <rect x="672" y="320" width="42" height="200"/>
+      <rect x="720" y="290" width="50" height="230"/>
+    </g>
+
+    <!-- subway rails (perspective) -->
+    <g>
+      <polygon points="365,800 435,800 418,500 382,500" fill="url(#rail2)"/>
+      <polygon points="190,800 295,800 372,500 388,500" fill="url(#rail2)" opacity="0.9"/>
+      <polygon points="610,800 505,800 428,500 412,500" fill="url(#rail2)" opacity="0.9"/>
+      <g fill="#FFD24C" opacity="0.45">
+        <rect x="352" y="535" width="96" height="11" rx="4"/>
+        <rect x="335" y="600" width="130" height="13" rx="5"/>
+        <rect x="312" y="680" width="176" height="16" rx="6"/>
+        <rect x="285" y="760" width="230" height="20" rx="7"/>
+      </g>
+    </g>
+
+    <!-- speed lightning -->
+    <g filter="url(#glow2)" opacity="0.9">
+      <polygon points="120,330 195,330 160,395 215,395 110,520 150,420 100,420" fill="#FFF36B"/>
+      <polygon points="680,330 605,330 640,395 585,395 690,520 650,420 700,420" fill="#FFF36B"/>
+    </g>
+
+    <!-- ===== RUNNING BOY CHARACTER (original) ===== -->
+    <g filter="url(#ds2)" transform="translate(400 400)">
+      <!-- speed streaks behind -->
+      <g stroke="#fff" stroke-width="11" stroke-linecap="round" opacity="0.85">
+        <line x1="-230" y1="-70" x2="-150" y2="-70"/>
+        <line x1="-255" y1="-20" x2="-160" y2="-20"/>
+        <line x1="-235" y1="35" x2="-150" y2="35"/>
+        <line x1="-250" y1="90" x2="-165" y2="90"/>
+      </g>
+
+      <!-- BACK ARM -->
+      <path d="M 25 -55 Q 70 -40 95 -5 Q 100 5 88 12 Q 75 18 65 8 Q 45 -20 12 -32 Z" fill="#E64A45"/>
+      <!-- back hand -->
+      <circle cx="92" cy="6" r="14" fill="#F2B98A"/>
+
+      <!-- BACK LEG (trailing) -->
+      <path d="M -8 35 Q 25 70 75 80 Q 90 83 90 98 Q 90 112 74 110 Q 18 102 -28 70 Z" fill="#1565C0"/>
+      <!-- back shoe -->
+      <path d="M 78 96 Q 118 92 122 108 L 122 118 Q 122 126 110 126 L 80 126 Q 70 126 70 114 Z" fill="#fff"/>
+      <path d="M 70 118 L 122 118 L 122 126 Q 122 130 116 130 L 76 130 Q 70 130 70 124 Z" fill="#11071F"/>
+
+      <!-- TORSO (hoodie) -->
+      <path d="M -55 -60
+               Q -60 -35 -50 30
+               Q -48 55 -20 58
+               L 30 58
+               Q 55 55 56 28
+               Q 60 -30 45 -62
+               Q 0 -85 -55 -60 Z" fill="url(#hoodie)"/>
+      <!-- hoodie pocket -->
+      <path d="M -34 18 Q 0 34 34 18 L 30 44 Q 0 54 -30 44 Z" fill="#C62828"/>
+      <!-- hoodie zipper -->
+      <line x1="-3" y1="-58" x2="-3" y2="52" stroke="#fff" stroke-width="5" opacity="0.85"/>
+
+      <!-- FRONT LEG (driving forward, knee up) -->
+      <path d="M 0 40 Q -40 60 -55 110 Q -60 125 -45 132 Q -30 138 -22 124 Q -8 90 25 78 Z" fill="url(#pants)"/>
+      <!-- front shoe -->
+      <path d="M -78 116 Q -95 130 -78 144 Q -55 158 -10 150 L 20 142 Q 30 138 26 126 L 14 100 Q -45 100 -78 116 Z" fill="#fff"/>
+      <path d="M -88 138 Q -70 150 -10 148 L 22 140 L 26 150 Q 24 158 12 160 L -40 165 Q -78 165 -90 150 Z" fill="#11071F"/>
+      <!-- sneaker stripe -->
+      <path d="M -60 120 Q -10 108 18 124 Q -25 120 -62 134 Z" fill="#00E5FF"/>
+
+      <!-- FRONT ARM (pumping forward) -->
+      <path d="M -40 -50 Q -85 -30 -100 10 Q -105 22 -92 28 Q -80 34 -72 22 Q -58 -8 -28 -22 Z" fill="url(#hoodie)"/>
+      <!-- front hand (fist) -->
+      <circle cx="-96" cy="18" r="15" fill="#F2B98A"/>
+
+      <!-- HEAD -->
+      <circle cx="-2" cy="-95" r="46" fill="#F2B98A"/>
+      <!-- ear -->
+      <circle cx="-44" cy="-90" r="11" fill="#E8A878"/>
+      <!-- headphone -->
+      <path d="M -48 -118 Q -2 -150 44 -118" fill="none" stroke="#11071F" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="-46" cy="-92" r="14" fill="#11071F"/>
+      <circle cx="42" cy="-92" r="14" fill="#11071F"/>
+      <circle cx="-46" cy="-92" r="7" fill="#00E5FF"/>
+      <circle cx="42" cy="-92" r="7" fill="#00E5FF"/>
+      <!-- face: eyes -->
+      <ellipse cx="6" cy="-100" rx="6" ry="8" fill="#11071F"/>
+      <ellipse cx="26" cy="-100" rx="6" ry="8" fill="#11071F"/>
+      <circle cx="8" cy="-103" r="2" fill="#fff"/>
+      <circle cx="28" cy="-103" r="2" fill="#fff"/>
+      <!-- eyebrows (determined) -->
+      <line x1="-2" y1="-114" x2="14" y2="-110" stroke="#3A2A1A" stroke-width="4" stroke-linecap="round"/>
+      <line x1="20" y1="-110" x2="36" y2="-114" stroke="#3A2A1A" stroke-width="4" stroke-linecap="round"/>
+      <!-- smile -->
+      <path d="M 2 -78 Q 18 -68 34 -80" fill="none" stroke="#11071F" stroke-width="4" stroke-linecap="round"/>
+
+      <!-- BEANIE / CAP -->
+      <path d="M -48 -108
+               Q -10 -156 44 -120
+               Q 50 -116 48 -108
+               L -48 -106 Z" fill="url(#cap)"/>
+      <path d="M -50 -104 L 50 -104 L 50 -94 Q 50 -88 42 -88 L -42 -88 Q -50 -88 -50 -96 Z" fill="#FF8F00"/>
+      <!-- cap pom -->
+      <circle cx="-2" cy="-152" r="11" fill="#fff"/>
+    </g>
+
+    <!-- channel name banner -->
+    <g transform="translate(400 632)">
+      <rect x="-235" y="-40" width="470" height="80" rx="40" fill="#11071F" opacity="0.92"/>
+      <rect x="-235" y="-40" width="470" height="80" rx="40" fill="none" stroke="url(#ring2)" stroke-width="5"/>
+      <text x="0" y="13" text-anchor="middle" font-family="Arial Black, Arial, sans-serif"
+            font-size="54" font-weight="900" fill="#fff" letter-spacing="2">SURF RUN</text>
+    </g>
+  </g>
+
+  <!-- SUBSCRIBE badge -->
+  <g transform="translate(400 740)">
+    <rect x="-132" y="-30" width="264" height="60" rx="30" fill="#FF0033"/>
+    <rect x="-132" y="-30" width="264" height="60" rx="30" fill="none" stroke="#fff" stroke-width="3"/>
+    <circle cx="-94" cy="0" r="17" fill="#fff"/>
+    <polygon points="-101,-9 -101,9 -84,0" fill="#FF0033"/>
+    <text x="20" y="9" text-anchor="middle" font-family="Arial Black, Arial, sans-serif"
+          font-size="30" font-weight="900" fill="#fff" letter-spacing="1">SUBSCRIBE</text>
+  </g>
+</svg>
